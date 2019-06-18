@@ -51,7 +51,7 @@ def user_input():
 
     if object_check['config_file'] != '':
         records = []
-        json_file = json.load(open(config_file_check[0].config_file))
+   json_file = json.load(open(config_file_check[0].config_file))
         for record in range(0,len(json_file['Records'])):
             arguments = {}
             for i in args_list:
@@ -67,7 +67,7 @@ def user_input():
         parser.add_argument('-kf', '--keywords_from_file', help='extract list of keywords from a text file', type=str, required=False)
         parser.add_argument('-sk', '--suffix_keywords', help='comma separated additional words added after to main keyword', type=str, required=False)
         parser.add_argument('-pk', '--prefix_keywords', help='comma separated additional words added before main keyword', type=str, required=False)
-        parser.add_argument('-l', '--limit', help='delimited list input', type=str, required=False)
+    parser.add_argument('-l', '--limit', help='delimited list input', type=str, required=False)
         parser.add_argument('-f', '--format', help='download images with specific format', type=str, required=False,
                             choices=['jpg', 'gif', 'png', 'bmp', 'svg', 'webp', 'ico'])
         parser.add_argument('-u', '--url', help='search with google image URL', type=str, required=False)
@@ -84,7 +84,7 @@ def user_input():
                             choices=['labeled-for-reuse-with-modifications','labeled-for-reuse','labeled-for-noncommercial-reuse-with-modification','labeled-for-nocommercial-reuse'])
         parser.add_argument('-s', '--size', help='image size', type=str, required=False,
                             choices=['large','medium','icon','>400*300','>640*480','>800*600','>1024*768','>2MP','>4MP','>6MP','>8MP','>10MP','>12MP','>15MP','>20MP','>40MP','>70MP'])
-        parser.add_argument('-es', '--exact_size', help='exact image resolution "WIDTH,HEIGHT"', type=str, required=False)
+      parser.add_argument('-es', '--exact_size', help='exact image resolution "WIDTH,HEIGHT"', type=str, required=False)
         parser.add_argument('-t', '--type', help='image type', type=str, required=False,
                             choices=['face','photo','clipart','line-drawing','animated'])
         parser.add_argument('-w', '--time', help='image age', type=str, required=False,
